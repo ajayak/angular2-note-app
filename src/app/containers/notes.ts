@@ -17,15 +17,13 @@ import { Component } from '@angular/core';
             </div>
             <div class="notes col-xs-8">
                 <div class="row between-xs">
-                <note-card
-                    [note] = "note"
-                ></note-card>
+                    <note-card [note] = "note"></note-card>
                 </div>
             </div>
         </div>
     `
 })
-export class NotesContainer { 
+export class NotesContainer {
     note = {
         title: 'This is a note',
         value: 'My first note'

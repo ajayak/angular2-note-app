@@ -51,6 +51,10 @@ import {
     </div> 
     `
 })
-export class NoteCard { 
+export class NoteCard {
     @Input() note = {};
+
+    onChecked() {
+        console.log('Delete clicked');
+    }
 }
