@@ -21,12 +21,14 @@ import { Component } from '@angular/core';
       <form class="row">
         <input
           type="text"
+          [(ngModel)]="newNote.title"
           name="newNoteTitle"
           placeholder="Title"
           class="col-xs-10 title"
         >
         <input
           type="text"
+          [(ngModel)]="newNote.value"
           name="newNoteValue"
           placeholder="Take a note..."
           class="col-xs-10"
@@ -43,4 +45,9 @@ import { Component } from '@angular/core';
     </div>
     `
 })
-export class NoteCreator { }
+export class NoteCreator {
+    newNote = {
+        title: "",
+        value: ""
+    }
+}

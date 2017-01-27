@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -15,7 +16,7 @@ import { AppBar, NoteCard, NoteCreator } from './app/ui';
         NotesContainer,
         NoteCreator
     ],
-    imports: [BrowserModule],
+    imports: [BrowserModule, FormsModule],
     bootstrap: [App]
 })
 export class AppModule { }
