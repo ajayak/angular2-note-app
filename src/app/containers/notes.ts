@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {
+    Component,
+    OnDestroy
+} from '@angular/core';
 import { NoteService } from '../services';
 
 @Component({
@@ -50,5 +53,9 @@ export class NotesContainer {
     onCreateNote(note) {
         this.noteService.createNote(note)
             .subscribe(note => this.notes.push(note));
+    }
+
+    ngOnDestroy() {
+        console.log('Destroyed');
     }
 }
