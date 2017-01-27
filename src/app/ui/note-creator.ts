@@ -75,10 +75,10 @@ export class NoteCreator {
     }
 
     onCreateNote() {
-        const { title, value } = this.newNote;
+        const { title, value, color } = this.newNote;
 
         if (title && value) {
-            this.createNote.next({ title, value });
+            this.createNote.next({ title, value, color });
             this.reset();
             this.toggle(false);
         }

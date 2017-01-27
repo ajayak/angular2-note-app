@@ -12,7 +12,7 @@ export class NoteService {
     }
 
     getNotes() {
-        this.api.get(this.path);
+        return this.api.get(this.path);
     }
 
     completeNote(note) {
